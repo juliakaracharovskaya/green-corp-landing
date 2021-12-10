@@ -3,6 +3,10 @@ header {
     justify-content: space-between;
     align-items: center;
     padding:20px;
+    position: sticky;
+    top:0;
+    background: white;
+    z-index:1;
   }
   body {
     font-family: 'Raleway', sans-serif;
@@ -34,12 +38,14 @@ header {
     padding: 15px
   }
   .about__image {
-    width: 500px;
+    width: 500px;    
   }
    
   .about__sun—image {
     width: 100px;
     height: 100px;
+    animation: rotation 10s linear infinite;
+    position: absolute;
   }
  .about {
   display: flex;
@@ -47,7 +53,7 @@ header {
   align-items: center;
   padding-top: 115px;
   padding-bottom: 115px;
- }
+   }
  .about h1 {
   font-size:70px;
   line-height:76px;
@@ -65,7 +71,7 @@ header {
 }
  .about__info {
   max-width: 550px;
-}
+ }
 .about {
    background: url('img/back.png') no-repeat;
   background-position: center;
@@ -175,3 +181,65 @@ footer h3 {
   .footer__links a {
     margin-bottom: 15px;
   }
+  @keyframes rotation {
+    0% {
+      transform:rotate(0deg);
+    }
+    100% {
+      transform:rotate(360deg);
+    }
+  }
+ .fa-angle-right {
+margin-left: 0.1cm;
+  }
+
+@media (max-width: 719px) {
+  .header,.section,.footer{
+    padding-left: 10px;
+    padding-right: 10px;
+   }
+    .header__logo {
+      height: 20px;
+  }
+  .about,.form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .h1 {
+    font-size: 36px;
+     line-height: 40px;
+  }
+  .about__image {
+    width: 280px;
+  }
+  .about__sun—image {
+    width: 75px;
+    height: 75px;
+  }
+}
+  
+@media (max-width: 1024px) {
+  .header, .section, .footer{
+    padding-left: 20px;
+    padding-right: 20px;
+   }
+    .header__logo {
+      height: 20px;
+  }
+  .about,.form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  .h1 {
+    font-size: 36px;
+     line-height: 40px;
+  }
+  .about__image {
+    width: 280px;
+  }
+  .about__sun—image {
+    width: 75px;
+    height: 75px;
+  }
+  
+}
