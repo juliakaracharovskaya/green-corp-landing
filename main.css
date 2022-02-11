@@ -428,4 +428,10 @@ footer {
       width: 75px;
       height: 75px;
   }
+  .cards {
+    grid-gap: 0px;
+  }
+  .card {
+    border: none;
+  }
 }
